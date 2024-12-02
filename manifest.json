@@ -2,10 +2,15 @@
     "manifest_version": 3,
     "name": "Caca Extension",
     "version": "1.0.0",
+    "permissions": ["activeTab"],
     "content_scripts": [
         {
             "matches": ["https://profile.intra.42.fr/"],
             "js": ["main.js"]
+        },
+        {
+            "matches": ["https://profile.intra.42.fr/users/*"],
+            "js": ["profile.js"]
         }
     ]
 }
